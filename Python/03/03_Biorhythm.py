@@ -1,3 +1,5 @@
+import math
+
 bd, bm, by, d, m, y = list(map(int, input().split()))
 
 days31 = [1, 3, 5, 7, 8, 10, 12]
@@ -34,5 +36,11 @@ def daysLeft(m, y, color):
     return d
         
 redDays = monthDays(bm, by) - bd + daysLeft(bm, by, "red") + 1
+blackDays = (y - (by + 1))*365
 blueDays = d + daysLeft(m, y, "blue") - 1
-print(redDays, blueDays)
+days = redDays + blackDays + blueDays
+phys = math.sin(2*math.pi*days/23)
+emo = math.sin(2*math.pi*days/28)
+intel = math.sin(2*math.pi*days/33)
+
+print(days, f'{phys:.2f}', f'{emo:.2f}', f'{intel:.2f}')
