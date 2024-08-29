@@ -22,7 +22,14 @@ def charRep(p):
     pass
 
 def numSeq(p):
-    pass
+    p = p.lower()
+    numSeq = ''.join([str(x) for x in range(10)] + ['0'])
+    numSeqRe = ''.join(numSeq[::-1])
+    for i in range(len(p) - 3):
+        text = p[i:i+4] 
+        if text in numSeq or text in numSeqRe:
+            return True
+    return False
 
 def charSeq(p):
     pass
