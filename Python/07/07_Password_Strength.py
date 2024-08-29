@@ -16,8 +16,9 @@ def noNum(p):
     return True
 
 def noSym(p):
-    if not p.isalnum():
-        return False
+    for c in p:
+        if not c.isalnum():
+            return False
     return True
 
 def charRep(p):
@@ -69,5 +70,27 @@ def keyPat(p):
                 return True
     return False
 
-pw = input().split()
-errors = []
+pw = input().strip()
+err = []
+if len(pw) < 8:
+    err.append('Less than 8 characters')
+if noLower(pw):
+    err.append('No lowercase letters')
+if noUpper(pw):
+    err.append('No uppercase letters')
+if noNum(pw):
+    err.append('No numbers')
+if noSym(pw):
+    err.append('No symbols')
+if charRep(pw):
+    err.append('Character repitition')
+if numSeq(pw):
+    err.append('Number sequence')
+if charSeq(pw):
+    err.append('Letter sequence')
+if keyPat(pw):
+    err.append('Keyboard pattern')
+if len(err) == 0:
+    err.append('OK')
+for er in err:
+    print(er)
