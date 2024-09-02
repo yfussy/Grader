@@ -7,11 +7,8 @@ def sqrt_n_times(x, n):
 
 def cube_root(y):
     y = sqrt_n_times(y, 2)
-    y *= sqrt_n_times(y, 2)
-    y *= sqrt_n_times(y, 4)
-    y *= sqrt_n_times(y, 8)
-    y *= sqrt_n_times(y, 16)
-    y *= sqrt_n_times(y, 32)
+    for n in range(1, 6):
+        y *= sqrt_n_times(y,2**n)
     return y
 
 def main():
