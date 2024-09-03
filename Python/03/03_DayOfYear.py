@@ -2,28 +2,12 @@ d = int(input())
 m = int(input())
 y = int(input())
 
-daysInMonth = {
-    1: 31,
-    2: 28,
-    3: 31,
-    4: 30,
-    5: 31,
-    6: 30,
-    7: 31,
-    8: 31,
-    9: 30,
-    10: 31,
-    11: 30,
-    12: 31,
-}
+dayInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+y -= 543
 
-for i in range(1, m, 1):
-    if (y-543) % 4 == 0 and i == 2:
-        if (y-543) % 100 == 0:
-            if (y-543) % 400 == 0:
-                d += 1
-        else:
-            d += 1
-    d += daysInMonth[i]
+for i in range(m-1):
+    d += dayInMonth[i]
+    if i == 1 and ((y % 4 == 0 and y % 100 != 0) or (y % 400 == 0)):
+        d += 1
 
 print(d)

@@ -1,32 +1,15 @@
-dayInMonth = {
-    1: 31,
-    2: 28,
-    3: 31,
-    4: 30,
-    5: 31,
-    6: 30,
-    7: 31,
-    8: 31,
-    9: 30,
-    10: 31,
-    11: 30,
-    12: 31,
-}
-
 def checkLeapYear(y):
     y -= 543
-    if (y % 4 == 0) & (y % 100 != 0):
+    if (y % 4 == 0 and y % 100 != 0) or (y % 400 == 0):
         return True
     return False
 
 def day_of_year(d, m, y):
-    dayth = 0
-    for i in range(1, m):
-        if (i == 2) & checkLeapYear(y):
-            dayth += 29
-            continue
-        dayth += dayInMonth[i]
-    dayth += d
-    return dayth
+    dayInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    for i in range(m-1):
+        d += dayInMonth[i]
+        if (i == 1) & checkLeapYear(y):
+            d += 1
+    return d
 
 exec(input()) 
