@@ -1,0 +1,4 @@
+- All problems are for subject **2110101 Computer Programming Faculty of Engineering, Chulalongkorn University academic year 2024 semester 1** (https://comprog.nattee.net/main/list)
+- Some problems might not be given to some of the students, so don't worry
+- Some solutions might not be the most effective approach. There are many possible solutions and variations, so give your approach a try. (If it works, it works)
+- If any questions, leave a comment and I'll try to answer it. Have fun 😄
