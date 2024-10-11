@@ -1,0 +1,5 @@
+- This repo is created for anyone struggling with the com prog subject and looking for an answer key or another possible approach apart from the answer key (https://www.youtube.com/playlist?list=PL0ROnaCzUGB6GmsZkqCjI12aasgFXiIDS)
+- All problems are for subject **2110101 Computer Programming Faculty of Engineering, Chulalongkorn University academic year 2024 semester 1** (https://comprog.nattee.net/main/list)
+- Some problems might not be given to some of the students, so don't worry
+- Some solutions might not be the most effective approach. There are many possible solutions and variations, so try your approach. (If it works, it works)
+- If you have any questions, reference them in /Issues, and I'll try to answer them. Enjoy 😄💻
