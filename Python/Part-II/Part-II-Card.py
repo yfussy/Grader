@@ -32,7 +32,7 @@ for i in range(0,len(deck)-2, 2):
         integral += '+' if dif > 0 else ''
         integral += str(dif)
     else:
-        dif = sets[firstCard[1]] - sets[secondCard[1]]
+        dif = suits[firstCard[1]] - suits[secondCard[1]]
         integral += '+' if dif > 0 else ''
         integral += str(dif)
 print(integral)
