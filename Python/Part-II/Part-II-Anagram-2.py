@@ -10,10 +10,11 @@ def showRemove(table):
         print(' - None')
         return 
     for char, n in table.items():
-        remove = f' - remove {str(n)} {char}'
-        if n > 1:
-            remove += "'s"
-        print(remove)
+        if n != 0:   
+            remove = f' - remove {str(n)} {char}'
+            if n > 1:
+                remove += "'s"
+            print(remove)
 
 a = input()
 b = input()
