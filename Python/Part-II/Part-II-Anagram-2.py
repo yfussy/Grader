@@ -18,14 +18,12 @@ def showRemove(table):
 a = input()
 b = input()
 aTable, bTable = hashTable(a), hashTable(b)
-same = {}
 for char in aTable.keys():
     if char in bTable:
-        same[char] = min(aTable[char], bTable[char])
-for char, n in same.items():
-    aTable[char] -= 1 * n
-    bTable[char] -= 1 * n
-
+        n = min(aTable[char], bTable[char])
+        aTable[char] -= 1 * n
+        bTable[char] -= 1 * n    
+        
 print(a)
 showRemove(aTable)
 print(b)
