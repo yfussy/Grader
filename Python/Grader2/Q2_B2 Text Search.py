@@ -6,7 +6,6 @@ for _ in range(n):
 S = '|'.join(layers)
 
 pointer = 0
-finds = []
 while True:
     start = S.replace('|', ' ').lower().find(target, pointer)
     if start == -1:
